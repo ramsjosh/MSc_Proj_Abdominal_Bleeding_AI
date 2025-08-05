@@ -20,7 +20,7 @@ You will also need the `totalsegmentator` organ segmentation masks provided with
 
 1.  **Clone the repository:**
     ```bash
-    git clone [[INSERT YOUR GITHUB REPOSITORY URL HERE](https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI/blob/main)]
+    git clone [[INSERT YOUR GITHUB REPOSITORY URL HERE](https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI)]
     cd MSc-Thesis-Abdominal-Bleeding-AI
     ```
 
@@ -39,20 +39,28 @@ You will also need the `totalsegmentator` organ segmentation masks provided with
 
 The project is structured into a sequence of scripts that should be run in order.
 
-1.  **Data Preprocessing:**
-    This script processes the raw DICOM files, performs triple windowing, and creates the 2.5D stacks.
-    ```bash
-    python 01_preprocess.py --data_dir /path/to/rsna_dataset --output_dir /path/to/preprocessed_data
-    ```
+**0. Dataset Curation (Optional but Recommended)**
 
-2.  **Model Training:**
-    This script trains the CNN-RNN model using the preprocessed data.
-    ```bash
-    python 02_train.py --preprocessed_dir /path/to/preprocessed_data --save_path /path/to/save/model.pth
-    ```
+This script creates the balanced 430-patient subset used in the thesis from the full downloaded dataset.
 
-3.  **Evaluation:**
-    This script evaluates the trained model on the test set and generates the final performance metrics and Grad-CAM visualizations.
-    ```bash
-    python 03_evaluate.py --model_path /path/to/save/model.pth --preprocessed_dir /path/to/preprocessed_data
-    ```
+```bash
+python 00_create_subset.py
+```
+
+**1. Data Preprocessing:**
+This script processes the raw DICOM files from your curated subset, performs triple windowing, and creates the 2.5D stacks.
+```bash
+python 01_preprocess.py --data_dir /path/to/bleed_subset_images --output_dir /path/to/preprocessed_data
+```
+
+**2. Model Training:**
+This script trains the CNN-RNN model using the preprocessed data.
+```bash
+python 02_train.py --preprocessed_dir /path/to/preprocessed_data --save_path /path/to/save/model.pth
+```
+
+**3. Evaluation:**
+This script evaluates the trained model on the test set and generates the final performance metrics and Grad-CAM visualizations.
+```bash
+python 03_evaluate.py --model_path /path/to/save/model.pth --preprocessed_dir /path/to/preprocessed_data
+
