@@ -19,7 +19,7 @@ You will also need the `totalsegmentator` organ segmentation masks provided with
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection](https://www.kaggle.com/competitions/rsna-2023-abdominal-trauma-detection)
+    git clone https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI.git
     cd MSc_Proj_Abdominal_Bleeding_AI
     ```
 
