@@ -40,7 +40,7 @@ You will also need the `TotalSegmentator` organ segmentation masks provided with
 
 The project is organized as a sequence of Jupyter notebooks (.ipynb) that should be executed in order. These are intentionally cleared of outputs for readability.
 
-Before running, make sure to configure the dataset paths in the first cell of each notebook.
+Before running, make sure to update the dataset paths.
 
 1.  **`00_create_subset.ipynb`**: Creates the balanced 430-patient subset used in the MSc Project from the full downloaded dataset.
 2.  **`01_preprocess.ipynb`**: Processes the raw DICOM files, performs triple windowing, and creates the 2.5D stacks.
