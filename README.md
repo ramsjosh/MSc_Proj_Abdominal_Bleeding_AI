@@ -19,7 +19,7 @@ You will also need the `totalsegmentator` organ segmentation masks provided with
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI](https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI)
+    git clone [[INSERT YOUR GITHUB REPOSITORY URL HERE](https://github.com/ramsjosh/MSc_Proj_Abdominal_Bleeding_AI)]
     cd MSc-Thesis-Abdominal-Bleeding-AI
     ```
 
