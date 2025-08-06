@@ -1,0 +1,12 @@
+pandas
+numpy
+pydicom
+dicom2nifti
+tqdm
+matplotlib
+scikit-learn
+torch
+torchvision
+torchcam
+nibabel
+albumentations
